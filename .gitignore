@@ -1,0 +1,56 @@
+# Python bytecode
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+env/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Data files
+data/*.csv
+data/*.xlsx
+data/*.json
+
+# Model files
+models/*.pkl
+models/*.joblib
+
+# Logs and debug files
+*.log
+*.out
+*.err
+
+# MacOS system files
+.DS_Store
+
+# Temporary files
+*.tmp
+*.temp
+
+# Config files
+*.env
+*.ini
+*.cfg
+
+# Jupyter Notebook config
+.jupyter/
+
+# VSCode settings
+.vscode/
+
+# PyCharm settings
+.idea/
+
+# Python packaging
+build/
+dist/
+*.egg-info/
+
+# Large data or output folders (optional)
+output/
+results/
