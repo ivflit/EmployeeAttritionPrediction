@@ -1,18 +1,18 @@
 # Data manipulation
-pandas==1.5.3
-numpy==1.24.2
+pandas
+numpy
 
 # Machine learning and model evaluation
-scikit-learn==1.2.1
-joblib==1.2.0
+scikit-learn
+joblib
 
 # Data visualization
-matplotlib==3.7.1
-seaborn==0.12.2
+matplotlib
+seaborn
 
 # For interactive analysis and feature importance (optional)
-jupyter==1.0.0
-shap==0.41.0
+jupyter
+shap
 
 # Additional visualization tools (optional for interpretability)
-plotly==5.13.0
+plotly
