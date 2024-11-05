@@ -35,7 +35,16 @@ def plot_shap_values(model, X_train):
     """Plot SHAP values to interpret the model's predictions."""
     explainer = shap.TreeExplainer(model)
     shap_values = explainer.shap_values(X_train)
-    
-    # Summary plot of SHAP values
-    shap.summary_plot(shap_values[1], X_train, plot_type="bar")
-    shap.summary_plot(shap_values[1], X_train)
+
+    # If binary classification, shap_values will be a list with two arrays
+    # for the two classes. We want the SHAP values for the positive class (1).
+    if isinstance(shap_values, list):
+        shap_values_class_1 = shap_values[1]  # SHAP values for class 1 (Attrition = 1)
+    else:
+        shap_values_class_1 = shap_values  # For single-class model
+
+    # Summary plot of SHAP values for the positive class
+    plt.figure()
+    shap.summary_plot(shap_values_class_1, X_train, plot_type="bar")
+    plt.figure()
+    shap.summary_plot(shap_values_class_1, X_train)
